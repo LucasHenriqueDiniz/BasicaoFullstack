@@ -1,8 +1,8 @@
-"""ajusta coluna id_categoria
+"""Created livro database
 
-Revision ID: c90b4ae21cb9
-Revises: 3440b30f427e
-Create Date: 2023-08-06 12:07:21.421194
+Revision ID: b8c1f3fd1b69
+Revises: 
+Create Date: 2023-08-15 15:57:40.266196
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'c90b4ae21cb9'
-down_revision = '3440b30f427e'
+revision = 'b8c1f3fd1b69'
+down_revision = None
 branch_labels = None
 depends_on = None
 
@@ -23,8 +23,9 @@ def upgrade():
     sa.Column('titulo', sa.String(length=255), nullable=False),
     sa.Column('autor', sa.String(length=255), nullable=False),
     sa.Column('ano_publicacao', sa.Integer(), nullable=False),
-    sa.Column('id_categoria', sa.Integer(), nullable=False),
-    sa.ForeignKeyConstraint(['id_categoria'], ['categoria.id'], ),
+    sa.Column('categoria', sa.String(length=255), nullable=False),
+    sa.Column('capa', sa.String(length=255), nullable=True),
+    sa.Column('sinopse', sa.String(length=255), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('titulo')
     )

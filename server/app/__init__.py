@@ -4,7 +4,6 @@ from flask_cors import CORS
 
 from app.extensions import db, migrate, api
 
-from app.controller.categoria_controller import api as categoria_ns
 from app.controller.livro_controller import api as livro_ns
 
 class DevelopmentConfig():
@@ -22,6 +21,5 @@ def create_app():
     api.init_app(app)
 
     api.add_namespace(livro_ns, path="/livro")
-    api.add_namespace(categoria_ns, path="/categoria")
 
     return app
