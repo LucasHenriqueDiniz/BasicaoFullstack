@@ -14,35 +14,34 @@ Welcome to the repository for the **Fullstack Basic Workshop** hosted by [Engenh
 
 ### Getting Started
 
-To begin working with this project's frontend, ensure you have Node.js installed and follow these steps:
+### To begin working with this project's frontend, ensure you have Node.js installed and follow these steps:
 
-1. Install project dependencies:
-   ```bash
-   npm install
-   npm run dev
-    ```
+Install project dependencies:
+```bash
+npm install
+npm run dev
+```
 
-For the backend, follow these instructions:
+### For the backend, follow these instructions:
 
-Install Poetry if not already installed:
+Install [Poetry](https://python-poetry.org/docs/) if not already installed:
+```bash
+pip install poetry
+```
 
-   ```bash
-    pip install poetry
-    Navigate to the server folder and install dependencies:
-    ```
-
-    ```bash
+Navigate to the server folder and install dependencies:
+```bash
     poetry install
-    Copy .env.example and rename it as .env.
-    ```
+```
+
+Copy .env.example and rename it as .env.
 
 Update the database (sqlite is used):
-
-    ```bash
-    poetry run task db-upgrade
-    Start the server:
-    ```
-
-    ```bash
-    poetry run task dev
-    ```
+```bash
+poetry run task db-upgrade
+Start the server:
+```
+Start the backend
+```bash
+poetry run task dev
+```
